@@ -1,0 +1,30 @@
+#processList{
+    margin-top: 50px;
+    bottom: 0px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.info{
+    height: 200px;
+    display: block;
+    padding: 4px;
+    margin-bottom: 20px;
+    line-height: 1.42857143;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+#mem{
+    height: 300px;
+}
+#filesystem {
+    height: 300px;
+    overflow-y: scroll;
+}
+#logOut{
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+    margin: 14px;
+}
