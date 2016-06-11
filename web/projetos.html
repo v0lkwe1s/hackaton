@@ -58,11 +58,13 @@
                                     <div class="titulo  "><h2>{{projeto.title}}</h2></div>
                                     <div class="descricao">{{projeto.description}}</div>
                                     <div class="vejaMais">
+                                        <a href="#" ng-click="votarContra()">
                                         <span class="label label-danger">
                                             Não {{projeto.contra}}
                                             <span class="glyphicon glyphicon-remove"></span>
                                         </span> 
-                                        <a href="#" ng-click="projeto.favor +1">
+                                        </a>
+                                        <a href="#" ng-click="votarFavor()">
                                             <span class="label label-success">
                                                 Sim {{projeto.favor}}
                                                 <span class="glyphicon glyphicon-ok"></span>

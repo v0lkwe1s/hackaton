@@ -4,4 +4,10 @@ app.controller("projetosCtrl", function($scope, $firebaseArray) {
   // create a synchronized array
   // click on `index.html` above to see it used in the DOM!
   $scope.projetos = $firebaseArray(ref);
-});
+
+    console.log($scope.projetos);
+    
+    $scope.votarFavor = function() {
+        console.log($scope);
+    };
+    });
