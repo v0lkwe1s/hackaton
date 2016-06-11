@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,7 +20,6 @@
         <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
         <script src="https://cdn.firebase.com/libs/angularfire/1.2.0/angularfire.min.js"></script>
         <!--JavaScript do Controlador -->
-        
         <script src="js/noticias-controller.js"></script>
     </head>
     <body ng-app="app.up" ng-controller="noticiasCtrl">
@@ -41,25 +40,24 @@
               </div><!-- /.container-fluid -->
             </nav>
         </header>
-        
         <section>
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-sm-2 col-md-2 sidebar">
                       <ul class="nav nav-sidebar" id="Menu">
-                            <li ng-class="{active: activetab == '/'}"><a href="/"><span class="glyphicon glyphicon-tasks sd" aria-hidden="true"></span><span class="md">Overview</span></a></li>
-                            <li ng-class="{active: activetab == '/netdebug/#1'}"><a href="#1"><span class="glyphicon glyphicon-tasks sd" aria-hidden="true"></span><span class="md">Entries</span></a></li>
-                            <li><a href="#"><span class="glyphicon glyphicon-tasks sd" aria-hidden="true"></span><span class="md">Report's</span></a></li>
+                            <li><a href="/"><span class="glyphicon glyphicon-list-alt sd" aria-hidden="true"></span><span class="md">Noticias</span></a></li>
+                            <li><a href="#1"><span class="glyphicon glyphicon-check sd" aria-hidden="true"></span><span class="md">Votar Projetos</span></a></li>
+                            <li><a href="#"><span class="glyphicon glyphicon-send sd" aria-hidden="true"></span><span class="md">Propor Projeto</span></a></li>
                             <li><a href="#"><span class="glyphicon glyphicon-tasks sd" aria-hidden="true"></span><span class="md">Misc</span></a></li>
                       </ul>
                     </div>
                     <div class="col-sm-9 col-md-10 col-md-offset-2 main" >
                         <div class="row">
                             <div class="col-xs-12 col-md-12">
-                                <div class="col-xs3-12 col-md-4" ng-repeat="noticia in noticias">
+                                <div class="col-xs3-12 col-md-4" ng-repeat="noticia in noticias ">
                                     <div class="titulo  "><h2>{{noticia.title}}</h2></div>
                                     <div class="descricao">{{noticia.description}}</div>
-                                    <div class="vejaMais"> <span>Veja Mais</span><span class="glyphicon glyphicon-new-window"></span></div>
+                                    <div class="vejaMais"><span>Veja Mais</span><span class="glyphicon glyphicon-new-window"></span></div>
                                 </div>
                             </div>
                         </div>

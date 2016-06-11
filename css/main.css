@@ -8,8 +8,10 @@ body {
     border: 1px solid #aaa;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    background-color: #eee;
 }
 .descricao {
+    background-color: #fff;
     border: 1px solid #aaa;
     border-bottom: 0px;
     max-height: 300px;
@@ -23,6 +25,7 @@ body {
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     text-align: right;
+    padding: 10px;
 }
 .navbar-default {
     background-color: #313030;

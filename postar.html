@@ -61,16 +61,16 @@
                             <div>
                                 <!-- xxxxxxxxxxx -->
                                 <h1>Postar notícia</h1>
-                                <form>
-                                    <div class="form-group">
+                                <form ng-controller="cadastroProjetosCtrl">
+                                    <div class="form-group" ng-model="projetos">
                                         <label for="titulo">Título</label>
-                                        <input ng-model="titulo" type="text" class="form-control" id="titulo" placeholder="Título" required>
+                                        <input ng-model="projetos.titulo" type="text" class="form-control" id="titulo" placeholder="Título" required>
                                     </div>
                                     <div class="form-group">
                                         <label for="descricao">Descrição</label>
-                                        <textarea ng-model="descricao" id="descricao" class="form-control" placeholder="Descrição" rows="6" required></textarea>
+                                        <textarea ng-model="projetos.descricao" id="descricao" class="form-control" placeholder="Descrição" rows="6" required></textarea>
                                     </div>
-                                    <button class="btn btn-default" ng-click="postar()">Postar</button>
+                                    <button class="btn btn-default" ng-click="postar(projetos)">Postar</button>
                                 </form>
                                 <!-- xxxxxxxxxxx -->
                             </div>
