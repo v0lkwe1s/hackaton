@@ -2,6 +2,12 @@ body {
     background-color: #ccc;
     padding-top: 60px;
 }
+.helpProposta {
+    font-size: 16px;
+}
+#propor{
+    width: 100%;
+}
 .titulo {
     height: 150px;
     overflow-y: hidden;

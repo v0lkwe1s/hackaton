@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,14 +20,52 @@
         <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
         <script src="https://cdn.firebase.com/libs/angularfire/1.2.0/angularfire.min.js"></script>
         <!--JavaScript do Controlador -->
-        
         <script src="js/cadastro-controller.js"></script>
     </head>
-    <body ng-app="app.up" ng-controller="cadastroCtrl">
-        <h1>Cadastro</h1>
-        <input type="email" />
-        <input type="password" />
-        <input type="submit"  />
+    <body ng-app="app.up">
+        <header>
+            <nav class="navbar navbar-default navbar-fixed-top">
+              <div class="container-fluid">
+                
+                <div class="navbar-header">
+                  <div> <h3>UP</h3> </div>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                  <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><span class="glyphicon glyphicon-check" aria-hidden="true"></span>Acompanhar</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span>Configurações</a></li>
+                  </ul>
+                 </div><!-- /.navbar-collapse -->
+              </div><!-- /.container-fluid -->
+            </nav>
+        </header>
+        <section>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-2 col-md-2 sidebar">
+                      <ul class="nav nav-sidebar" id="Menu">
+                            <li ><a href="index.html"><span class="glyphicon glyphicon-list-alt sd" aria-hidden="true"></span><span class="md">Noticias</span></a></li>
+                            <li><a href="projetos.html"><span class="glyphicon glyphicon-check sd" aria-hidden="true"></span><span class="md">Votar Projetos</span></a></li>
+                            <li><a href="postar.html"><span class="glyphicon glyphicon-send sd" aria-hidden="true"></span><span class="md">Propor Projeto</span></a></li>
+                            <li class="active"><a href="cadastro.html"><span class="glyphicon glyphicon-user sd" aria-hidden="true"></span><span class="md">Login/Cadastro</span></a></li>
+                      </ul>
+                    </div>
+                    <div class="col-sm-9 col-md-10 col-md-offset-2 main" >
+                    <div class="row">
+                        <div class="col-xs-12 col-md-12" ng-view>
+                            <form ng-controller="cadastroCtrl">
+                                <h1>Cadastro</h1>
+                                <input type="email" />
+                                <input type="password" />
+                                <input type="submit"  />
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </section>
         <script src="lib/bootstrap/js/jquery.js"></script>
         <script src="lib/bootstrap/js/bootstrap.min.js"></script>
     </body>

@@ -46,27 +46,30 @@
                     <div class="col-sm-2 col-md-2 sidebar">
                       <ul class="nav nav-sidebar" id="Menu">
                             <li ><a href="index.html"><span class="glyphicon glyphicon-list-alt sd" aria-hidden="true"></span><span class="md">Noticias</span></a></li>
-                            <li><a href="projetos.html"><span class="glyphicon glyphicon-check sd" aria-hidden="true"></span><span class="md">Votar Projetos</span></a></li>
+                            <li ><a href="projetos.html"><span class="glyphicon glyphicon-check sd" aria-hidden="true"></span><span class="md">Votar Projetos</span></a></li>
                             <li class="active"><a href="postar.html"><span class="glyphicon glyphicon-send sd" aria-hidden="true"></span><span class="md">Propor Projeto</span></a></li>
-                            <li><a href="#"><span class="glyphicon glyphicon-tasks sd" aria-hidden="true"></span><span class="md">Misc</span></a></li>
+                            <li ><a href="cadastro.html"><span class="glyphicon glyphicon-user sd" aria-hidden="true"></span><span class="md">Login/Cadastro</span></a></li>
                       </ul>
                     </div>
                     <div class="col-sm-9 col-md-10 col-md-offset-2 main" >
                     <div class="row">
                         <div class="col-xs-12 col-md-12" ng-view>
-                            <div>
-                                <h1>Postar notícia</h1>
+                            <div class="col-xs-8 col-md-6">
+                                <h1>Propor projeto</h1>
                                 <form ng-controller="cadastroProjetosCtrl">
                                     <div class="form-group">
-                                        <label for="titulo">Título</label>
-                                        <input ng-model="titulo" type="text" class="form-control" id="titulo" placeholder="Título" required>
+                                        <label for="titulo">Assunto</label>
+                                        <input ng-model="titulo" type="text" class="form-control" id="titulo" placeholder="Assunto" required>
                                     </div>
                                     <div class="form-group">
                                         <label for="descricao">Descrição</label>
                                         <textarea ng-model="descricao" id="descricao" class="form-control" placeholder="Descrição" rows="6" required></textarea>
                                     </div>
-                                    <button class="btn btn-default" ng-click="postar()">Postar</button>
+                                    <button class="btn btn-info" ng-click="postar()" id="propor">Enviar Proposta!</button>
                                 </form>
+                            </div >
+                            <div class="col-xs-4 col-md-6">
+                                <div class="helpProposta">Esta area é destinada a população para propor projetos a ser avaliados pela camara de veredores</div>
                             </div>
                         </div>
                     </div>
