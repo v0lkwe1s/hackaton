@@ -9,6 +9,12 @@ app.controller("cadastroProjetosCtrl", function($scope, $firebaseArray) {
    var projetos = $firebaseArray(ref);
 
    $scope.postar = function() {
-      projetos.push({ title: $scope.titulo,  description: $scope.descricao });
+      projetos.$add({ title: $scope.titulo,  description: $scope.descricao }).then(function(ref) {
+         var id = ref.key();
+         projetos.$indexFor(id);
+
+         $scope.titulo = '';
+         $scope.descricao = '';
+      });
    };
 }); 
