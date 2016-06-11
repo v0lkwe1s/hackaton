@@ -2,6 +2,28 @@ body {
     background-color: #ccc;
     padding-top: 50px;
 }
+.titulo {
+    padding-left: 20px;
+    padding-right: 20px;
+    border: 1px solid #aaa;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.descricao {
+    border: 1px solid #aaa;
+    border-bottom: 0px;
+    max-height: 300px;
+    overflow: hidden;
+    padding: 20px;
+    min-height: 300px;
+}
+.vejaMais{
+    border: 1px solid #aaa;
+     border-top: 0px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    text-align: right;
+}
 .navbar-default {
     background-color: #313030;
     border-color: #313030;
@@ -24,6 +46,9 @@ body {
 .sd{
     font-size: 16px;
     font-weight: bold;
+}
+.col-md-4 {
+    margin-bottom: 10px;
 }
 .sidebar {
     position: fixed;

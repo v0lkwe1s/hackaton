@@ -56,9 +56,10 @@
                     <div class="col-sm-9 col-md-10 col-md-offset-2 main" >
                         <div class="row">
                             <div class="col-xs-12 col-md-12">
-                                <div class="col-xs3-3 col-md-3" ng-repeat="noticia in noticias">
-                                    <div><h1>{{noticia.title}}</h1></div>
-                                    <div>{{noticia.description}}</div>
+                                <div class="col-xs3-12 col-md-4" ng-repeat="noticia in noticias">
+                                    <div class="titulo  "><h2>{{noticia.title}}</h2></div>
+                                    <div class="descricao">{{noticia.description}}</div>
+                                    <div class="vejaMais"> <span>Veja Mais</span><span class="glyphicon glyphicon-new-window"></span></div>
                                 </div>
                             </div>
                         </div>
