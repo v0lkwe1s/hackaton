@@ -41,7 +41,7 @@ public class GcmMessageHandler extends IntentService {
         PendingIntent contentIntent = PendingIntent.getActivity(getApplicationContext(),0,notificationIntent,0);
 
         builder.setContentIntent(contentIntent);
-        builder.setSmallIcon(R.drawable.ic_menu_follow);
+        builder.setSmallIcon(R.drawable.ic_menu_follow_white);
         builder.setContentTitle("Up");
         builder.setContentText(title);
         builder.setAutoCancel(true);
