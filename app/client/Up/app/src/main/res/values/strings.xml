@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Up</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="string_menu_follow">Acompanhar</string>
+    <string name="string_card_view_see_more">Ver Mais</string>
+    <string name="string_menu_settings">Configurações</string>
+
+    <string name="action_settings">Settings</string>
+</resources>
