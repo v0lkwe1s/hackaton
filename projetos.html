@@ -20,9 +20,9 @@
         <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
         <script src="https://cdn.firebase.com/libs/angularfire/1.2.0/angularfire.min.js"></script>
         <!--JavaScript do Controlador -->
-        <script src="js/noticias-controller.js"></script>
+        <script src="js/projeto-controller.js"></script>
     </head>
-    <body ng-app="app.up" ng-controller="noticiasCtrl">
+    <body ng-app="app.up">
         <header>
             <nav class="navbar navbar-default navbar-fixed-top">
               <div class="container-fluid">
@@ -45,18 +45,18 @@
                 <div class="row">
                     <div class="col-sm-2 col-md-2 sidebar">
                       <ul class="nav nav-sidebar" id="Menu">
-                            <li class="active"><a href="index.html"><span class="glyphicon glyphicon-list-alt sd" aria-hidden="true"></span><span class="md">Noticias</span></a></li>
-                            <li><a href="projetos.html"><span class="glyphicon glyphicon-check sd" aria-hidden="true"></span><span class="md">Votar Projetos</span></a></li>
-                            <li><a href="#"><span class="glyphicon glyphicon-send sd" aria-hidden="true"></span><span class="md">Propor Projeto</span></a></li>
+                            <li ><a href="index.html"><span class="glyphicon glyphicon-list-alt sd" aria-hidden="true"></span><span class="md">Noticias</span></a></li>
+                            <li class="active"><a href="projetos.html"><span class="glyphicon glyphicon-check sd" aria-hidden="true"></span><span class="md">Votar Projetos</span></a></li>
+                            <li><a href="postar.html"><span class="glyphicon glyphicon-send sd" aria-hidden="true"></span><span class="md">Propor Projeto</span></a></li>
                             <li><a href="#"><span class="glyphicon glyphicon-tasks sd" aria-hidden="true"></span><span class="md">Misc</span></a></li>
                       </ul>
                     </div>
                     <div class="col-sm-9 col-md-10 col-md-offset-2 main" >
                         <div class="row">
-                            <div class="col-xs-12 col-md-12">
-                                <div class="col-xs3-12 col-md-4" ng-repeat="noticia in noticias">
-                                    <div class="titulo  "><h2>{{noticia.title}}</h2></div>
-                                    <div class="descricao">{{noticia.description}}</div>
+                            <div class="col-xs-12 col-md-12" ng-controller="projetosCtrl">
+                                <div class="col-xs3-12 col-md-4" ng-repeat="projeto in projetos">
+                                    <div class="titulo  "><h2>{{projeto.title}}</h2></div>
+                                    <div class="descricao">{{projeto.description}}</div>
                                     <div class="vejaMais"><span>Veja Mais</span><span class="glyphicon glyphicon-new-window"></span></div>
                                 </div>
                             </div>

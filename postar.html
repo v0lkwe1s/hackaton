@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,7 +10,6 @@
         <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
         <link href="css/main.css" rel="stylesheet">
         <link href="css/app.css" rel="stylesheet">
-        <link href="css/teste.css" rel="stylesheet">
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -21,113 +20,61 @@
         <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
         <script src="https://cdn.firebase.com/libs/angularfire/1.2.0/angularfire.min.js"></script>
         <!--JavaScript do Controlador -->
-        
-        <!--<script src="js/noticias-controller.js"></script>-->
         <script src="js/cadastro-projetos-controller.js"></script>
     </head>
-    <body ng-app="app.up" ng-controller="cadastroProjetosCtrl">
-    <header>
-        <nav class="navbar navbar-default navbar-fixed-top">
-            <div class="container-fluid">
-
+    <body ng-app="app.up">
+        <header>
+            <nav class="navbar navbar-default navbar-fixed-top">
+              <div class="container-fluid">
+                
                 <div class="navbar-header">
-                    <div> <h3>UP</h3> </div>
+                  <div> <h3>UP</h3> </div>
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav navbar-right">
-            <li><a href="#"><span class="glyphicon glyphicon-check" aria-hidden="true"></span>Acompanhar</a></li>
-            <li><a href="#"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span>Configurações</a></li>
-        </ul>
-    </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-    </nav>
-    </header>
-
-    <section>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-sm-2 col-md-2 sidebar">
-                    <ul class="nav nav-sidebar" id="Menu">
-                        <li ng-class="{active: activetab == '/'}"><a href="/"><span class="glyphicon glyphicon-tasks sd" aria-hidden="true"></span><span class="md">Overview</span></a></li>
-                        <li ng-class="{active: activetab == '/netdebug/#1'}"><a href="#1"><span class="glyphicon glyphicon-tasks sd" aria-hidden="true"></span><span class="md">Entries</span></a></li>
-                        <li><a href="#"><span class="glyphicon glyphicon-tasks sd" aria-hidden="true"></span><span class="md">Report's</span></a></li>
-                        <li><a href="#"><span class="glyphicon glyphicon-tasks sd" aria-hidden="true"></span><span class="md">Misc</span></a></li>
-                    </ul>
-                </div>
-                <div class="col-sm-9 col-md-10 col-md-offset-2 main" >
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                  <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><span class="glyphicon glyphicon-check" aria-hidden="true"></span>Acompanhar</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span>Configurações</a></li>
+                  </ul>
+                 </div><!-- /.navbar-collapse -->
+              </div><!-- /.container-fluid -->
+            </nav>
+        </header>
+        <section>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-2 col-md-2 sidebar">
+                      <ul class="nav nav-sidebar" id="Menu">
+                            <li ><a href="index.html"><span class="glyphicon glyphicon-list-alt sd" aria-hidden="true"></span><span class="md">Noticias</span></a></li>
+                            <li><a href="projetos.html"><span class="glyphicon glyphicon-check sd" aria-hidden="true"></span><span class="md">Votar Projetos</span></a></li>
+                            <li class="active"><a href="postar.html"><span class="glyphicon glyphicon-send sd" aria-hidden="true"></span><span class="md">Propor Projeto</span></a></li>
+                            <li><a href="#"><span class="glyphicon glyphicon-tasks sd" aria-hidden="true"></span><span class="md">Misc</span></a></li>
+                      </ul>
+                    </div>
+                    <div class="col-sm-9 col-md-10 col-md-offset-2 main" >
                     <div class="row">
                         <div class="col-xs-12 col-md-12" ng-view>
                             <div>
                                 <h1>Postar notícia</h1>
                                 <form ng-controller="cadastroProjetosCtrl">
-                                    <div class="form-group" ng-model="projetos">
+                                    <div class="form-group">
                                         <label for="titulo">Título</label>
-                                        <input ng-model="projetos.titulo" type="text" class="form-control" id="titulo" placeholder="Título" required>
+                                        <input ng-model="titulo" type="text" class="form-control" id="titulo" placeholder="Título" required>
                                     </div>
                                     <div class="form-group">
                                         <label for="descricao">Descrição</label>
-                                        <textarea ng-model="projetos.descricao" id="descricao" class="form-control" placeholder="Descrição" rows="6" required></textarea>
+                                        <textarea ng-model="descricao" id="descricao" class="form-control" placeholder="Descrição" rows="6" required></textarea>
                                     </div>
-                                    <button class="btn btn-default" ng-click="postar(projetos)">Postar</button>
+                                    <button class="btn btn-default" ng-click="postar()">Postar</button>
                                 </form>
                             </div>
                         </div>
                     </div>
                 </div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
         <script src="lib/bootstrap/js/jquery.js"></script>
         <script src="lib/bootstrap/js/bootstrap.min.js"></script>
     </body>
-    <!--
-     <body ng-app="app.up" ng-controller="noticiasCtrl">
-        <header>
-            <nav class="navbar navbar-default navbar-fixed-top">
-              <div class="container-fluid">
-
-                <div class="navbar-header">
-                  <div> <h3>UP</h3> </div>
-                </div>
-                <!-- Collect the nav links, forms, and other content for toggling -- >
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav navbar-right">
-            <li><a href="#"><span class="glyphicon glyphicon-check" aria-hidden="true"></span>Acompanhar</a></li>
-            <li><a href="#"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span>Configurações</a></li>
-        </ul>
-    </div><!-- /.navbar-collapse -- >
-    </div><!-- /.container-fluid -- >
-    </nav>
-    </header>
-
-    <section>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-sm-2 col-md-2 sidebar">
-                    <ul class="nav nav-sidebar" id="Menu">
-                        <li ng-class="{active: activetab == '/'}"><a href="/"><span class="glyphicon glyphicon-tasks sd" aria-hidden="true"></span><span class="md">Overview</span></a></li>
-                        <li ng-class="{active: activetab == '/netdebug/#1'}"><a href="#1"><span class="glyphicon glyphicon-tasks sd" aria-hidden="true"></span><span class="md">Entries</span></a></li>
-                        <li><a href="#"><span class="glyphicon glyphicon-tasks sd" aria-hidden="true"></span><span class="md">Report's</span></a></li>
-                        <li><a href="#"><span class="glyphicon glyphicon-tasks sd" aria-hidden="true"></span><span class="md">Misc</span></a></li>
-                    </ul>
-                </div>
-                <div class="col-sm-9 col-md-10 col-md-offset-2 main" >
-                    <div class="row">
-                        <div class="col-xs-12 col-md-12" ng-view>
-                            <div class="col-xs3-3 col-md-3" ng-repeat="noticia in noticias">
-                                <div><h1>{{noticia.titulo}}</h1></div>
-                                <div>{{noticia.descricao}}</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <script src="lib/bootstrap/js/jquery.js"></script>
-    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
-    </body>
-
-     -->
 </html>
