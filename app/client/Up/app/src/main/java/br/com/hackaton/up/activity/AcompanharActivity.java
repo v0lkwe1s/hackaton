@@ -10,9 +10,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.android.gms.gcm.GoogleCloudMessaging;
+
 import java.io.IOException;
 import java.net.URL;
 import java.util.concurrent.ExecutionException;
@@ -26,6 +29,9 @@ public class AcompanharActivity extends AppCompatActivity
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
+    private String regId;
+    private GoogleCloudMessaging gcm;
+    String PROJECT_NUMBER = "NUMERO_SEU_PROJETO";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +61,8 @@ public class AcompanharActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        getRegId();
     }
 
     @Override
@@ -93,6 +101,30 @@ public class AcompanharActivity extends AppCompatActivity
             return null;
         }
     }
+
+    public void getRegId(){
+        new AsyncTask<Void, Void, String>(){
+
+            @Override
+            protected String doInBackground(Void... params) {
+                String msg = "";
+                try {
+                    if (gcm == null){
+                        gcm = GoogleCloudMessaging.getInstance(getApplicationContext());
+                    }
+
+                    regId = gcm.register(PROJECT_NUMBER);
+                    Log.i("GCM", regId);
+                } catch (IOException e){
+                    msg = "Error :" + e.getMessage();
+                    e.printStackTrace();
+                }
+
+                return msg;
+            }
+        }.execute();
+    }
+
 }
 
 class GetFeedList extends AsyncTask<Void, Void, Results> {
