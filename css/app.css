@@ -28,3 +28,8 @@
     color: #fff;
     margin: 14px;
 }
+
+#titulo, #descricao {
+    width: 100%;
+    max-width: 650px;
+}
