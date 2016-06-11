@@ -1,6 +1,6 @@
 body {
     background-color: #ccc;
-    padding-top: 50px;
+    padding-top: 60px;
 }
 .titulo {
     height: 150px;
@@ -23,11 +23,16 @@ body {
 }
 .vejaMais{
     border: 1px solid #aaa;
-     border-top: 0px;
+    border-top: 0px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     text-align: right;
+    padding: 20px;
+}
+.label{
     padding: 10px;
+    margin: 5px;
+    font-size: 16px;
 }
 .navbar-default {
     background-color: #313030;
@@ -87,7 +92,7 @@ body {
 .glyphicon {
     margin-right: 10px;
 }
-@media (max-width: 768px) {
+@media (max-width: 990px) {
     .md {
         display: none;
     }
@@ -98,4 +103,5 @@ body {
     .main {
         margin-left: 10%;
     }
+
 }
