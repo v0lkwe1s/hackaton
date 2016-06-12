@@ -15,6 +15,7 @@
         android:id="@+id/txtDescription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="#000"
         android:text="Câmera Municipal de Pato Branco"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
 
