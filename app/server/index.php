@@ -24,5 +24,4 @@
 
 		echo json_encode($lista_json);
 	}
-
 ?>

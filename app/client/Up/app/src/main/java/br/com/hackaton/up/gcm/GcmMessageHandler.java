@@ -42,7 +42,7 @@ public class GcmMessageHandler extends IntentService {
 
         builder.setContentIntent(contentIntent);
         builder.setSmallIcon(R.drawable.ic_menu_follow_white);
-        builder.setContentTitle("Up");
+        builder.setContentTitle("Up Pato Branco");
         builder.setContentText(title);
         builder.setAutoCancel(true);
         builder.setDefaults(Notification.DEFAULT_ALL);

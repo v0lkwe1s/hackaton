@@ -12,13 +12,22 @@
 
 			if ($lastUpdate != $feed->get_date('d/m/Y H:i')){
 
+				$conn = new PDO("pgsql:host=seu_host;port=sua_porta;dbname=seu_banco;user=seu_usuario;password=sua_senha");
+				$conn->exec('SET search_path TO public');	
+				$result = $conn->query("SELECT gcm_key FROM users"); 							
+				
+				$gcm_keys = array();
+				foreach($result as $user){
+					array_push($gcm_keys, $user["gcm_key"]);
+				}
+									
 				$fields = array (
-            		'registration_ids' => array('id'),
+            		'registration_ids' => $gcm_keys,
             		'data' => array("title" => $feed->get_title()),
         		);
 
 				$headers = array (
-            		'Authorization: key=SUA_KEY',
+            		'Authorization: key=SUA_API_KEY',
             		'Content-Type: application/json',
         		);
 
